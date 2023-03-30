@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+    <style>
+        .container, .item {
+            border: 1px solid saddlebrown;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .container {
+            width: 300px;
+            position: relative;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            color: #62300d;
+        }
+
+        .item:last-child {
+            background-color: saddlebrown;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            transition: all 200ms;
+        }
+
+        .item:last-child:hover {
+            border-radius: 50%;
+        }
+
+        .item:first-child:hover + .item {
+           left: 100%;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="item">
+        <p>Hello :)</p>
+    </div>
+    <div class="item"></div>
+</div>
+
+</body>
+</html>
